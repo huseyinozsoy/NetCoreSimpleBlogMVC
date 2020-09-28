@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Blog
+
+<div class="post-preview">
+    <h2 class="post-title">
+      @Model.Title
+    </h2>
+    <p class="post-preview">
+    @Model.Body
+    </p>
+  <p class="post-meta">
+    @foreach (var category in Model.BlogCategories)
+    {
+        <span class="badge badge-primary">@category.Category.CategoryNName</span>
+    }
+   @DateTime.Now.ToString("dd/MM/yyyy")</p>
+</div> 
+          
